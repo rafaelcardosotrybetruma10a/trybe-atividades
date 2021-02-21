@@ -1,0 +1,31 @@
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.description {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 550px;
+    padding-left: 50px;
+    padding-top: 100px;
+}
+body {
+    background-color: #ffe8d6;
+}
+.primeiro {
+    font-size: 20px;
+}
+.teste {
+    font-size: 18px;
+}
+#foto-aula {
+    width: 350px;
+    float: left;
+    padding-left: 50px;
+}
+.habilidades {
+    margin-top: 200px;
+}
+.rafael {
+    background-color: #e76f51;
+}
