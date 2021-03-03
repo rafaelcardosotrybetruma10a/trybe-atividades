@@ -62,6 +62,21 @@
 				title.innerHTML = "Exercício 5.1 - JavaScript";
 			}
 			correctTitle();
+
+			function paragraphs(){
+				let uppercase = document.getElementsByTagName('p')[0];
+				uppercase.innerHTML = uppercase.innerHTML.toUpperCase();
+			}	
+      paragraphs();
+
+			function print(){
+				let allParagraphs = document.getElementsByTagName('p');
+				for (let index = 0; index < allParagraphs.length; index += 1){
+				console.log(allParagraphs[index].innerHTML);
+				}
+			}
+			print()
+			
 				/*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
