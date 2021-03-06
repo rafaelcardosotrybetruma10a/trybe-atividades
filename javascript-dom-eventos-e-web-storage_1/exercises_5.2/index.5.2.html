@@ -71,6 +71,7 @@
       // Questao 3
         let secondDiv = document.createElement('div');
         secondDiv.className = 'center-content';
+        secondDiv.style.backgroundColor = 'green'; // Parte 2 adiciona um backgroundColor verde
         document.querySelector('.main-content').appendChild(secondDiv)
 
       // Questao 4
@@ -119,6 +120,10 @@
         //Questão 3
         document.querySelector(".left-content").parentNode.removeChild(document.querySelector(".left-content"));
 
+        // Questão 6
+        let removeitem = document.querySelector('ul');
+        removeitem.removeChild(removeitem.lastChild);
+        removeitem.removeChild(removeitem.lastChild); 
 
       // COLOQUE SEU CÓDIGO AQUI
     </script>
