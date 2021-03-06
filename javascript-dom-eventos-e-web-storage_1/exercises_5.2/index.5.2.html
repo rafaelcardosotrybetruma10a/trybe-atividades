@@ -57,26 +57,26 @@
   </head>
   <body>
     <script>
-      function h1 () {
-          let h1novo = document.createElement('h1');
-          h1novo.innerHTML = 'Exercício 5.2 - JavaScript DOM';
-          document.body.appendChild(h1novo);
-      }
-      h1 ()
-      
-      function div (){
+      // Questao 1
+        let h1novo = document.createElement('h1');
+        h1novo.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+        document.body.appendChild(h1novo);
+    
+      // Questao 2
         let divmain = document.createElement('div');
         divmain.className = 'main-content';
         document.body.appendChild(divmain);
-      }
-      div ()
-      
-      function secondDiv () {
+     
+      // Questao 3
         let secondDiv = document.createElement('div');
         secondDiv.className = 'center-content';
-        document.div.appendChild(secondDiv);
-      }
-      secondDiv ()
+        document.querySelector('.main-content').appendChild(secondDiv)
+
+      // Questao 4
+        let newParagraph = document.createElement('p')
+        newParagraph.innerHTML = 'Olá, como vai?';
+        document.secondDiv.appendChild(newParagraph)
+    
       // COLOQUE SEU CÓDIGO AQUI
     </script>
   </body>
