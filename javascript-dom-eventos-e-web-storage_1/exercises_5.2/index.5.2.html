@@ -86,6 +86,23 @@
         let fourthDiv = document.createElement('div');
         fourthDiv.className = 'right-content';
         document.querySelector('.main-content').appendChild(fourthDiv)
+
+        //Questão 7
+        let photo = document.createElement('img');
+        photo.src = 'https://picsum.photos/200';
+        photo.className = 'small-image'
+        document.querySelector('.left-content').appendChild(photo)
+
+        //Questão 8
+        let ulList = document.createElement('ul')
+        document.querySelector('.right-content').appendChild(ulList)
+        ulList.className = 'list-test'
+        let arrayNumbers = ['Um', 'Dois', 'Tres', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
+        for (let index = 0; index < arrayNumbers.length; index += 1) {
+          let liList = document.createElement('li');
+          liList.innerHTML = arrayNumbers[index];
+          document.querySelector('.list-test').appendChild(liList)
+        }
       // COLOQUE SEU CÓDIGO AQUI
     </script>
   </body>
