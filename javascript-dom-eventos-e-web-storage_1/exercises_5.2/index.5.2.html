@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Questao 1
+        let h1novo = document.createElement('h1');
+        h1novo.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+        h1novo.className = 'title' // Parte 2 adiciona uma classe title
+        document.body.appendChild(h1novo);
+    
+      // Questao 2
+        let divmain = document.createElement('div');
+        divmain.className = 'main-content';
+        document.body.appendChild(divmain);
+     
+      // Questao 3
+        let secondDiv = document.createElement('div');
+        secondDiv.className = 'center-content';
+        secondDiv.style.backgroundColor = 'green'; // Parte 2 adiciona um backgroundColor verde
+        document.querySelector('.main-content').appendChild(secondDiv)
+
+      // Questao 4
+        let newParagraph = document.createElement('p')
+        newParagraph.innerHTML = 'Olá, como vai?';
+        document.querySelector('.center-content').appendChild(newParagraph)
+
+        //Questão 5
+        let thirdDiv = document.createElement('div');
+        thirdDiv.className = 'left-content';
+        document.querySelector('.main-content').appendChild(thirdDiv)
+    
+        //Questão 6
+        let fourthDiv = document.createElement('div');
+        fourthDiv.className = 'right-content';
+        fourthDiv.style.marginRight = 'auto'; // Parte 2 adiciona uma margin-right: auto
+        document.querySelector('.main-content').appendChild(fourthDiv)
+
+        //Questão 7
+        let photo = document.createElement('img');
+        photo.src = 'https://picsum.photos/200';
+        photo.className = 'small-image'
+        document.querySelector('.left-content').appendChild(photo)
+
+        //Questão 8
+        let ulList = document.createElement('ul')
+        document.querySelector('.right-content').appendChild(ulList)
+        ulList.className = 'list-test'
+        let arrayNumbers = ['Um', 'Dois', 'Tres', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
+        for (let index = 0; index < arrayNumbers.length; index += 1) {
+          let liList = document.createElement('li');
+          liList.innerHTML = arrayNumbers[index];
+          document.querySelector('.list-test').appendChild(liList)
+        }
+
+        //Questão 9
+        for (let index = 1; index <= 3; index += 1) {
+          let h3 = document.createElement('h3');
+          h3.className = 'description' // Parte 2 adiciona uma classe description
+          h3.innerHTML = 'teste' + index;
+          document.querySelector('.main-content').appendChild(h3)
+        }
+        
+        // Parte 2
+
+        //Questão 3
+        document.querySelector(".left-content").parentNode.removeChild(document.querySelector(".left-content"));
+
+        // Questão 6
+        let removeitem = document.querySelector('ul');
+        removeitem.removeChild(removeitem.lastChild);
+        removeitem.removeChild(removeitem.lastChild); 
+
+      // COLOQUE SEU CÓDIGO AQUI
+    </script>
+  </body>
+</html>
